@@ -5,7 +5,8 @@ class Grupo:
 
     def __init__(self, grupo="grupo predeterminado", asignaturas= None, estudiantes= None):
         self._grupo = grupo
-        if self.listadoAlumnos != None:
+
+        if estudiantes!= None:
             self.listadoAlumnos = estudiantes
         else:
             self._istadoAlumnos = []
