@@ -13,7 +13,7 @@ class Grupo:
             self._asignaturas.append(Asignatura(x))
 
     def __str__(self):
-       nuevo= " Grupo de estudiantes:"+ self._gr
+       nuevo= " Grupo de estudiantes:"+ self._grupo
        return nuevo
 
 
