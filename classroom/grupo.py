@@ -9,7 +9,7 @@ class Grupo:
         if estudiantes!= None:
             self.listadoAlumnos = estudiantes
         else:
-            self._istadoAlumnos = []
+            self.istadoAlumnos = []
 
         if asignaturas != None:
             self._asignaturas = asignaturas
