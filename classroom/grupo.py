@@ -9,7 +9,7 @@ class Grupo:
         if estudiantes!= None:
             self.listadoAlumnos = estudiantes
         else:
-            self.istadoAlumnos = []
+            self.listadoAlumnos = []
 
         if asignaturas != None:
             self._asignaturas = asignaturas
@@ -24,8 +24,8 @@ class Grupo:
 
 
 
-    def agregarAlumno(self, alumno, lista= None):
-        if lista ==None:
+    def agregarAlumno(self, alumno, lista=None):
+        if lista == None:
             lista = [alumno]
             self.listadoAlumnos = self.listadoAlumnos + lista
         else:
