@@ -3,7 +3,7 @@ class Grupo:
 
     grado = "Grado 12"
 
-    def __init__(self, grupo="grupo predeterminado", asignaturas=[], estudiantes=[]):
+    def __init__(self, grupo="grupo predeterminado", asignaturas= [], estudiantes=None):
         self._grupo = grupo
         self._asignaturas = asignaturas
         self.listadoAlumnos = estudiantes
@@ -12,16 +12,13 @@ class Grupo:
         for x in kwargs.values():
             self._asignaturas.append(Asignatura(x))
 
-    def __str__(self):
-       nuevo= " Grupo de estudiantes:"+ self._grupo
-       return nuevo
+
 
 
 
     def agregarAlumno(self, alumno, lista= None):
         if(lista is not None):
-            lista.append(alumno)
-            self.listadoAlumnos = self.listadoAlumnos + lista
+            self.listadoAlumnos = lista + [alumno]
         else:
             self.listadoAlumnos = [alumno]
 
@@ -29,6 +26,8 @@ class Grupo:
     def asignarNombre(cls, nombre="Grado 6"):
         cls.grado = nombre
 
-    
+    def __str__(self):
+       nuevo= " Grupo de estudiantes:"+ self._grupo
+       return nuevo
 
    
