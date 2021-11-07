@@ -7,8 +7,8 @@ class Asignatura:
     
 
     def __str__(self):
-       anadir= self._nombre + " "+ self._salon
-       return anadir
+      return self._nombre + " "+ self._salon
+      
 
 
 
