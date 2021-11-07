@@ -3,7 +3,7 @@ class Grupo:
 
     grado = "Grado 12"
 
-    def __init__(self, grupo="grupo predeterminado", asignaturas= None, estudiantes=None):
+    def __init__(self, grupo="grupo predeterminado", asignaturas= [], estudiantes=[]):
         self._grupo = grupo
         self._asignaturas = asignaturas
         self.listadoAlumnos = estudiantes
@@ -17,19 +17,20 @@ class Grupo:
 
 
     def agregarAlumno(self, alumno, lista= None):
-        if lista is  None:
-            lista = [alumno]
+        if lista !=None:
+            lista.append(alumno)
             self.listadoAlumnos = self.listadoAlumnos + lista
-
+               
         else:
-            self.listadoAlumnos = lista+[alumno]
+             self.listadoAlumnos= [alumno]
 
     @ classmethod
     def asignarNombre(cls, nombre="Grado 6"):
         cls.grado = nombre
 
     def __str__(self):
-       return " Grupo de estudiantes:"+ self._grupo
+       r= " Grupo de estudiantes:"+ self._grupo
+       return r
        
 
    
